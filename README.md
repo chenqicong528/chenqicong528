@@ -8,38 +8,40 @@
 
 <br/>
 
-写 Python 和一点前端，兴趣是把想要的东西自己搭出来 —— 桌面上跑的、服务器上跑的、Worker 里跑的。
+写 Python，也写点前端。
 
-手上这些项目的起点基本都是「这个我自己要用」：桌宠是为了屏幕角落不那么空，书签测活是因为收藏夹里躺了三年死链，Unicode 转换是因为懒得开在线工具，主题是因为看不顺眼现成的。自己用顺手了，才整理成能给别人用的样子。
+不是科班，没在大厂待过。会的东西基本都是「想做个什么」逼出来的——想给屏幕角落加个东西，就学了 PyQt；想把死链挑出来，就写了并发请求；嫌现成主题改起来麻烦，就自己重写一套。
 
-大部分时间在 Cloudflare Workers / D1 / KV 上折腾自建服务，另外管几台 VPS。白天写代码，晚上修自己写出来的 bug。
-
-<br/>
-
-## 最近在做什么
-
-**[qiqi77](https://github.com/chenqicong528/qiqi77-typecho)** —— 一个 Typecho 主题。起因很简单：手上这个博客用了三年的主题，改一处颜色要翻三个 CSS 文件，索性重写一套。
-
-现在的版本后台能调 80 项，分 10 组，带搜索。听起来像堆功能，其实是为了少改代码——每次想调点什么都要开编辑器，这事本身就说明设计没做好。
-
-顺手把动态 sitemap、百度推送也做进去了，省得再装插件。
+代码写得不快，但能跑。跑起来之后再用几天，顺手了才想着开源。
 
 <br/>
 
-## 自研项目
+## 手上在弄的
 
-| 项目 | 说明 | 技术 |
-| :--- | :--- | :--- |
-| **[qiqi77-typecho](https://github.com/chenqicong528/qiqi77-typecho)** | Typecho 卡片式主题。毛玻璃、深浅色、PJAX、80 项后台配置 | `PHP` `MIT` |
-| **[qicong-pet](https://github.com/chenqicong528/qicong-pet)** | 柒葱桌宠 —— Windows 桌面看板娘。24 节气皮肤、音乐节奏灯、便签、番茄钟，支持模组扩展 | `Python` `MIT` |
-| **[Unicode](https://github.com/chenqicong528/Unicode)** | Unicode 与中文互转。粘贴即转，双向，不用装环境也不用联网 | `HTML` |
-| **[LinkVerification](https://github.com/chenqicong528/LinkVerification)** | 书签 HTML 批量测活。并发探链接，标记失效项，导出干净的那一份 | `HTML` `JS` |
-| **[oh-404](https://github.com/chenqicong528/oh-404)** | 一个自己写的 404 页面，静态站直接拿来用 | `CSS` |
-| **[dd3plusdriver](https://github.com/chenqicong528/dd3plusdriver)** | 炫龙 DD3 Plus 驱动备份。老机器重装前先存一份，省得到处翻 | `归档` |
+**qiqi77** —— 一个 Typecho 主题。
+
+起因挺土的：原来那套主题，改个颜色要翻三个 CSS 文件，改完还得清缓存。烦了，索性重写。
+
+现在的版本后台能调 80 项，分 10 组。听起来像堆功能，其实是懒——每改一个数就要开编辑器，说明这设计本来就不对。
+
+顺手把动态 sitemap、百度推送也塞进去了。少装两个插件是一个。
 
 <br/>
 
-## 技术栈
+## 做过的
+
+| 项目 | 一句话 |
+| :--- | :--- |
+| **[qiqi77-typecho](https://github.com/chenqicong528/qiqi77-typecho)** | Typecho 主题。毛玻璃、深浅色、PJAX、后台能调 80 项。`PHP` |
+| **[qicong-pet](https://github.com/chenqicong528/qicong-pet)** | Windows 桌宠。24 节气皮肤、音乐节奏灯、便签、番茄钟。`Python` |
+| **[Unicode](https://github.com/chenqicong528/Unicode)** | Unicode 和中文互转。粘贴就转，不用装环境不用联网。`HTML` |
+| **[LinkVerification](https://github.com/chenqicong528/LinkVerification)** | 书签批量测活。并发探一遍，失效的标出来，导出干净那份。`JS` |
+| **[oh-404](https://github.com/chenqicong528/oh-404)** | 一个 404 页面。静态站直接拿去用。`CSS` |
+| **[dd3plusdriver](https://github.com/chenqicong528/dd3plusdriver)** | 老笔记本的驱动备份。重装系统前先存一份，省得到处翻。`归档` |
+
+<br/>
+
+## 平时用的
 
 <p>
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white&labelColor=1e293b" />
@@ -64,17 +66,21 @@
 
 ## 也在折腾
 
-Cloudflare Workers 生态的自建服务：服务器监控探针（D1 + Durable Objects，离线告警 / 到期通知 / 历史延迟）、在线剪贴板与文件分享、图床、订阅转换、多模型 AI 面板。上游 fork 过来改配置，跑在自己的域名下。
+Cloudflare Workers 上一堆自建的东西：服务器探针（D1 + Durable Objects，离线告警、到期提醒、延迟曲线）、在线剪贴板、图床、订阅转换、多模型 AI 面板。
 
-另外维护一个跑了九年的博客，写过点相机、路由器、折腾记录之类的东西。写文章比写代码慢，但比写文档快。
+大多是 fork 上游改配置，跑自己域名下。改得多了也踩不少坑，回头看看，一半时间花在「为什么它不动」上。
 
 <br/>
 
-## 关于这个博客
+## 博客
 
-[qicong.zqhope.cn](https://qicong.zqhope.cn) —— 2017 年开的，中间换过两次域名、四次主题。
+[qicong.zqhope.cn](https://qicong.zqhope.cn)
 
-现在跑的是 Typecho + 自己写的 [qiqi77](https://github.com/chenqicong528/qiqi77-typecho)。没什么流量，主要是给自己留个地方放东西——哪天想起来「那个配置怎么弄的」，翻自己博客比翻收藏夹快。
+2017 年开的，中间换过两次域名、四次主题。
+
+文章不多，都是踩坑记录：路由器变砖怎么救、CCD 相机怎么辨真假、小米手机的广告怎么关。写得比代码慢，但比写文档快。
+
+没什么人看。主要是给自己留个地方——哪天想起来「那个参数怎么配的」，翻自己博客比翻收藏夹快。
 
 <br/>
 
@@ -88,17 +94,6 @@ Cloudflare Workers 生态的自建服务：服务器监控探针（D1 + Durable 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=chenqicong528&layout=compact&langs_count=8&hide_border=true&theme=tokyonight&locale=cn&card_width=340" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=chenqicong528&layout=compact&langs_count=8&hide_border=true&theme=default&locale=cn&card_width=340" width="340" />
-</picture>
-
-</div>
-
-<br/>
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-trophy.vercel.app/?username=chenqicong528&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=8&margin-h=8" />
-  <img src="https://github-profile-trophy.vercel.app/?username=chenqicong528&theme=flat&no-frame=true&no-bg=true&column=7&margin-w=8&margin-h=8" />
 </picture>
 
 </div>
