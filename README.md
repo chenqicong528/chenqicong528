@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/banner.png" alt="陈启聪 — 柒葱" width="100%" />
+  <img src="./assets/banner.png" alt="Qicong" width="100%" />
 </div>
 
 <div align="center">
